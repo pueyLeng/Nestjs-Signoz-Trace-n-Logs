@@ -30,10 +30,12 @@ export class SigNozLogger extends ConsoleLogger {
     super.log(message, ...optionalParams);
     this.logger.info({ span_id: 'Hello' }, message, ...optionalParams);
   }
+
   error(message: any, ...optionalParams: any[]) {
     super.error(message, ...optionalParams);
-    this.logger.error(message, ...optionalParams);
+    this.logger.error({}, message, ...optionalParams);
   }
+
   warn(message: any, ...optionalParams: any[]) {
     super.warn(message, ...optionalParams);
     this.logger.warn(message, ...optionalParams);
